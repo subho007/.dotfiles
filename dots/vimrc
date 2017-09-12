@@ -36,6 +36,21 @@ Plug 'rking/ag.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'roxma/python-support.nvim'
+
+
+" vim markdown composer
+function! BuildComposer(info)
+  if a:info.status != 'unchanged' || a:info.force
+    if has('nvim')
+      !cargo build --release
+    else
+      !cargo build --release --no-default-features --features json-rpc
+    endif
+  endif
+endfunction
+
+Plug 'euclio/vim-markdown-composer', { 'do': function('BuildComposer') }
 
 call plug#end()
 
@@ -45,8 +60,10 @@ call plug#end()
 
 let g:loaded_python_provider=1
 let g:loaded_python3_provider=1
-" let g:python3_host_prog=/usr/local/bin/python3
-" let g:python_host_prog=/usr/local/bin/python2
+let g:python_host_prog  = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python_support_python2_venv = 0
+let g:python_support_python3_venv = 0
 
 " ---
 " Theme

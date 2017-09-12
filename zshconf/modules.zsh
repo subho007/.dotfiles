@@ -17,7 +17,7 @@ zplug "zsh-users/zsh-syntax-highlighting",      defer:3, on:"zsh-users/zsh-autos
 zplug "zsh-users/zsh-history-substring-search", defer:3, on:"zsh-users/zsh-syntax-highlighting"
 
 # Enhanced cd
-zplug "b4b4r07/enhancd", use:enhancd.sh
+zplug "b4b4r07/enhancd", use:init.sh
 
 # Bookmarks and jump
 zplug "jocelynmallon/zshmarks"
