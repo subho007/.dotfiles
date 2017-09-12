@@ -1,0 +1,35 @@
+# Persistent history
+try:
+    import readline
+except ImportError:
+    print("Module readline not available.")
+else:
+    import os
+    histfile = os.path.expanduser('~/.pythonhistory')
+    try:
+        readline.read_history_file(histfile)
+    except IOError:
+        pass
+    import atexit
+    atexit.register(readline.write_history_file, histfile)
+    del histfile, atexit, readline, os
+
+# Tab-completion
+try:
+    import readline
+except ImportError:
+    print("Module readline not available.")
+else:
+    import os, sys
+    try:
+        # look for rlcompleter2 in ~/src, it's a bit more advanced
+        sys.path.append(os.path.expanduser('~/src/rlcompleter2'))
+        import rlcompleter2
+        rlcompleter2.setup()
+        del rlcompleter2
+    except ImportError:
+        # fall back to rlcompleter from the standard library
+        import rlcompleter
+        readline.parse_and_bind("tab: complete")
+        del rlcompleter
+    del readline, os, sys
