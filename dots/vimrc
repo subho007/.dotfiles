@@ -36,7 +36,6 @@ Plug 'rking/ag.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
-Plug 'roxma/python-support.nvim'
 
 
 " vim markdown composer
@@ -58,12 +57,8 @@ call plug#end()
 " Python Support
 " ---
 
-let g:loaded_python_provider=1
-let g:loaded_python3_provider=1
-let g:python_host_prog  = '/usr/local/bin/python2'
-let g:python3_host_prog = '/usr/local/bin/python3'
-let g:python_support_python2_venv = 0
-let g:python_support_python3_venv = 0
+let g:python_host_prog  = '/Users/subho/ENV/neovim2/bin/python'
+let g:python3_host_prog = '/Users/subho/ENV/neovim3/bin/python'
 
 " ---
 " Theme
