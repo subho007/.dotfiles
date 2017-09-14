@@ -30,8 +30,8 @@ source /usr/local/share/zsh/site-functions
 # Load private configuration file
 #
 
-if [ -f $HOME/.dotfile/.localzshrc ]; then
-  source $HOME/.dotfile/.localzshrc
+if [ -f $HOME/.dotfiles/.localzshrc ]; then
+  source $HOME/.dotfiles/.localzshrc
 fi
 
 #
