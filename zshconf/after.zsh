@@ -10,9 +10,6 @@ unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
-bindkey -v
-bindkey "^R" history-incremental-search-backward
-
 fpath=(/usr/local/share/zsh-completions $fpath)
 
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
@@ -48,3 +45,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+source "${HOME}/.dotfiles/zshconf/kubernetes.zsh"
