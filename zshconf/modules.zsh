@@ -32,8 +32,11 @@ zplug "djui/alias-tips"
 # Docker completion
 zplug "felixr/docker-zsh-completion"
 
-# Load theme
-zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+# # Load theme
+# zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
+
+zplug mafredri/zsh-async, from:github
+zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
 
 # zsh-autoenv automatically sources
 zplug "Tarrasch/zsh-autoenv"
