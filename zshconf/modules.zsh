@@ -1,15 +1,18 @@
 # Plugins from prezto
 
 zplug "modules/homebrew",   from:prezto
-zplug "modules/terminal",   from:prezto
 zplug "modules/directory",  from:prezto
 zplug "modules/git",        from:prezto
 zplug "modules/terminal",   from:prezto
 
 #Plugin from oh-my-zsh
 
-zplug "plugins/safe-paste", from:oh-my-zsh
 zplug "plugins/kubectl",    from:oh-my-zsh
+zplug "plugins/adb",        from:oh-my-zsh
+zplug "plugins/extract",    from:oh-my-zsh
+zplug "plugins/git-flow",   from:oh-my-zsh
+zplug "plugins/golang",     from:oh-my-zsh
+zplug "plugins/osx",        from:oh-my-zsh
 
 # zsh users
 zplug "zsh-users/zsh-completions",              defer:0
