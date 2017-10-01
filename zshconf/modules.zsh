@@ -1,15 +1,15 @@
 # Plugins from prezto
 
-zplug "modules/history",    from:prezto
-zplug "modules/utility",    from:prezto
 zplug "modules/homebrew",   from:prezto
 zplug "modules/terminal",   from:prezto
-zplug "modules/editor",     from:prezto
 zplug "modules/directory",  from:prezto
-zplug "modules/completion", from:prezto
 zplug "modules/git",        from:prezto
-zplug "modules/homebrew",   from:prezto
-zplug "modules/terminal",    from:prezto
+zplug "modules/terminal",   from:prezto
+
+#Plugin from oh-my-zsh
+
+zplug "plugins/safe-paste", from:oh-my-zsh
+zplug "plugins/kubectl",    from:oh-my-zsh
 
 # zsh users
 zplug "zsh-users/zsh-completions",              defer:0
@@ -35,8 +35,8 @@ zplug "felixr/docker-zsh-completion"
 # # Load theme
 # zplug "bhilburn/powerlevel9k", use:powerlevel9k.zsh-theme
 
-zplug mafredri/zsh-async, from:github
-zplug sindresorhus/pure, use:pure.zsh, from:github, as:theme
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure",  use:pure.zsh, from:github, as:theme
 
 # zsh-autoenv automatically sources
 zplug "Tarrasch/zsh-autoenv"

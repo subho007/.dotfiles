@@ -51,6 +51,10 @@ POWERLEVEL9K_LOCK_ICON='\UF023'
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT=' alias hint: '
 
+zstyle ':prezto:module:terminal' auto-title 'yes'
+
+# use the custom history modules
+source $HOME/.dotfiles/zshconf/history.zsh
 
 # Load all the alias
 source $HOME/.dotfiles/zshconf/alias.zsh
