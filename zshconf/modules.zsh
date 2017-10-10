@@ -30,9 +30,6 @@ zplug "jocelynmallon/zshmarks"
 # Tips for aliases
 zplug "djui/alias-tips"
 
-# Docker completion
-zplug "felixr/docker-zsh-completion"
-
 zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure",  use:pure.zsh, from:github, as:theme
 
