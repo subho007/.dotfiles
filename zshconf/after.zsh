@@ -10,8 +10,6 @@ unalias run-help
 autoload run-help
 HELPDIR=/usr/local/share/zsh/help
 
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 export GOPATH=$(go env GOPATH)
 export PATH=$PATH:$GOPATH/bin/

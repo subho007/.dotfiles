@@ -3,16 +3,23 @@ source $HOME/.dotfiles/zshconf/before.zsh
 
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT=' alias hint: '
 
+# auto title the terminal
 zstyle ':prezto:module:terminal' auto-title 'yes'
 
-if zplug check zsh-users/zsh-history-substring-search; then
-  zmodload zsh/terminfo
-  bindkey "$terminfo[cuu1]" history-substring-search-up
-  bindkey "$terminfo[cud1]" history-substring-search-down
-fi
+# color substring search
+zstyle ':prezto:module:history-substring-search' color 'yes'
 
-# use the custom history modules
-source $HOME/.dotfiles/zshconf/history.zsh
+# Set the query found color.
+zstyle ':prezto:module:autosuggestions' color 'yes'
+zstyle ':prezto:module:autosuggestions:color' found 'fg=147'
+
+
+bindkey -v
+bindkey "^R" history-incremental-search-backward
+bindkey "^[[1;2D" backward-word  # Shift + Left moves cursor a word back
+bindkey "^[[1;2C" forward-word   # Shift + Right moves cursor a word forward
+
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 # Load all the alias
 source $HOME/.dotfiles/zshconf/alias.zsh
