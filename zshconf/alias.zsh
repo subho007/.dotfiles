@@ -2,7 +2,7 @@ alias l="ls"  # normal ls
 alias ll="ls -al"
 alias kk="k -a"  # zsh plugin for k
 alias j="jump"
-alias b="bookmark"
+alias bm="bookmark"
 alias dm="deletemark"
 alias lb="showmarks"
 
