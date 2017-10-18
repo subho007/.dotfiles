@@ -46,8 +46,11 @@
 	# Commit all changes
 	ca = !git add -A && git commit -av
 
-	# Switch to a branch, creating it if necessary
-	co = checkout -B
+	# Switch to a branch
+	co = checkout
+
+    # Create a new branch
+    cob = checkout -B
 
 	# Show verbose output about tags, branches or remotes
 	tags = tag -l
