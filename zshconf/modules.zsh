@@ -18,7 +18,6 @@ zplug "plugins/adb",        from:oh-my-zsh
 zplug "plugins/extract",    from:oh-my-zsh
 zplug "plugins/git-flow",   from:oh-my-zsh
 zplug "plugins/golang",     from:oh-my-zsh
-zplug "plugins/osx",        from:oh-my-zsh
 
 
 # Enhanced dir list with git features
