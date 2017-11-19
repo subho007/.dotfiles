@@ -8,7 +8,6 @@ zplug "modules/archive",                    from:prezto
 zplug "modules/utility",                    from:prezto
 zplug "modules/history",                    from:prezto
 zplug "modules/completion",                 from:prezto, on:"modules/utility"
-zplug "modules/history-substring-search",   from:prezto
 zplug "modules/autosuggestions",            from:prezto, on:"modules/history-substring-search"
 
 
@@ -35,3 +34,10 @@ zplug "sindresorhus/pure",  use:pure.zsh, from:github, as:theme
 
 # zsh-autoenv automatically sources
 zplug "Tarrasch/zsh-autoenv"
+
+# History search like fish shell
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search", on:"zsh-users/zsh-syntax-highlighting"
+
+# Enhanced history search on ctrl-r
+zplug "b4b4r07/zsh-history-enhanced"

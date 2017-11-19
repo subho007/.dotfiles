@@ -18,6 +18,15 @@ bindkey -v
 # bindkey "^R" history-incremental-search-backward
 bindkey "^[[1;2D" backward-word  # Shift + Left moves cursor a word back
 bindkey "^[[1;2C" forward-word   # Shift + Right moves cursor a word forward
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
+
+if zplug check "b4b4r07/zsh-history-enhanced"; then
+    ZSH_HISTORY_FILTER="fzy:fzf:peco:percol"
+    ZSH_HISTORY_KEYBIND_GET_BY_DIR="^r"
+    ZSH_HISTORY_KEYBIND_GET_ALL="^r^a"
+fi
+
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
