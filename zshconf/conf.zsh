@@ -15,7 +15,7 @@ zstyle ':prezto:module:autosuggestions:color' found 'fg=147'
 
 
 bindkey -v
-bindkey "^R" history-incremental-search-backward
+# bindkey "^R" history-incremental-search-backward
 bindkey "^[[1;2D" backward-word  # Shift + Left moves cursor a word back
 bindkey "^[[1;2C" forward-word   # Shift + Right moves cursor a word forward
 
@@ -29,3 +29,4 @@ source $HOME/.dotfiles/zshconf/functions.zsh
 
 # After everything loads
 source $HOME/.dotfiles/zshconf/after.zsh
+

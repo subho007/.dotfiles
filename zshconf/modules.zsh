@@ -5,10 +5,11 @@ zplug "modules/directory",                  from:prezto
 zplug "modules/git",                        from:prezto
 zplug "modules/terminal",                   from:prezto
 zplug "modules/archive",                    from:prezto
-zplug "modules/utility",                    from:prezto, defer:0
-zplug "modules/completion",                 from:prezto, on:"modules/utility", defer:2
-zplug "modules/history-substring-search",   from:prezto, defer:0
-zplug "modules/autosuggestions",            from:prezto, on:"modules/history-substring-search", defer:2
+zplug "modules/utility",                    from:prezto
+zplug "modules/history",                    from:prezto
+zplug "modules/completion",                 from:prezto, on:"modules/utility"
+zplug "modules/history-substring-search",   from:prezto
+zplug "modules/autosuggestions",            from:prezto, on:"modules/history-substring-search"
 
 
 #Plugin from oh-my-zsh
