@@ -36,8 +36,9 @@ zplug "sindresorhus/pure",  use:pure.zsh, from:github, as:theme
 zplug "Tarrasch/zsh-autoenv"
 
 # History search like fish shell
-zplug "zsh-users/zsh-syntax-highlighting"
-zplug "zsh-users/zsh-history-substring-search", on:"zsh-users/zsh-syntax-highlighting"
+# zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zdharma/fast-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search", on:"zdharma/fast-syntax-highlighting"
 
 # Enhanced history search on ctrl-r
 zplug "b4b4r07/zsh-history-enhanced"
