@@ -226,10 +226,10 @@ autocmd VimEnter * call CorrectColorScheme()
 let mapleader=" "
 
 " Learn it the hard way
-nmap <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+" nmap <up> <nop>
+" map <down> <nop>
+" map <left> <nop>
+" map <right> <nop>
 
 map <leader>l :set list!<CR>
 map <leader>w :set wrap!<CR>
