@@ -36,7 +36,7 @@ Plug 'rking/ag.vim'
 Plug 'rizzatti/dash.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
-
+Plug 'w0rp/ale'
 
 " vim markdown composer
 function! BuildComposer(info)
