@@ -38,6 +38,19 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 Plug 'w0rp/ale'
 
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'zchee/deoplete-jedi'
+
+let g:deoplete#enable_at_startup = 1
+
 " vim markdown composer
 function! BuildComposer(info)
   if a:info.status != 'unchanged' || a:info.force
@@ -57,8 +70,8 @@ call plug#end()
 " Python Support
 " ---
 
-let g:python_host_prog  = '/Users/subho/ENV/neovim2/bin/python'
-let g:python3_host_prog = '/Users/subho/ENV/neovim3/bin/python'
+let g:python_host_prog  = '/usr/local/bin/python2'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " ---
 " Theme
