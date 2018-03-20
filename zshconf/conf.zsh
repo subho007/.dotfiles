@@ -30,8 +30,6 @@ fi
 
 fpath=(/usr/local/share/zsh-completions $fpath)
 
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
-
 # Load all the alias
 source $HOME/.dotfiles/zshconf/alias.zsh
 
@@ -41,3 +39,4 @@ source $HOME/.dotfiles/zshconf/functions.zsh
 # After everything loads
 source $HOME/.dotfiles/zshconf/after.zsh
 
+[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
