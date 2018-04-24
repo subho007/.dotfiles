@@ -15,7 +15,6 @@ zplug "modules/autosuggestions",            from:prezto, on:"modules/history-sub
 
 zplug "plugins/kubectl",    from:oh-my-zsh
 zplug "plugins/adb",        from:oh-my-zsh
-zplug "plugins/extract",    from:oh-my-zsh
 zplug "plugins/git-flow",   from:oh-my-zsh
 zplug "plugins/golang",     from:oh-my-zsh
 
@@ -36,6 +35,3 @@ zplug "Tarrasch/zsh-autoenv"
 # zplug "zsh-users/zsh-syntax-highlighting"
 zplug "zdharma/fast-syntax-highlighting"
 zplug "zsh-users/zsh-history-substring-search", on:"zdharma/fast-syntax-highlighting"
-
-# Enhanced history search on ctrl-r
-zplug "b4b4r07/zsh-history-enhanced"
