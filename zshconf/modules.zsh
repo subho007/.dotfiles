@@ -4,7 +4,6 @@ zplug "modules/homebrew",                   from:prezto
 zplug "modules/directory",                  from:prezto
 zplug "modules/git",                        from:prezto
 zplug "modules/terminal",                   from:prezto
-zplug "modules/archive",                    from:prezto
 zplug "modules/utility",                    from:prezto
 zplug "modules/completion",                 from:prezto, on:"modules/utility"
 zplug "modules/autosuggestions",            from:prezto, on:"modules/history-substring-search"
