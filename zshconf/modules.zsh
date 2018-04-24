@@ -20,9 +20,6 @@ zplug "plugins/git-flow",   from:oh-my-zsh
 zplug "plugins/golang",     from:oh-my-zsh
 
 
-# Enhanced dir list with git features
-zplug "supercrabtree/k"
-
 # Bookmarks and jump
 zplug "jocelynmallon/zshmarks"
 
