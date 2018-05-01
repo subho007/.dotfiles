@@ -20,10 +20,5 @@ source $HOME/.dotfiles/zshconf/modules.zsh
 # zsh modules configuration
 source $HOME/.dotfiles/zshconf/conf.zsh
 
-# Install plugins if there are plugins that have not been installed
-if ! zplug check; then
-   zplug install
-fi
-
 # Load everything
 zplug load

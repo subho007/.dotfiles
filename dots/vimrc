@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'morhetz/gruvbox'
+Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'Shougo/denite.nvim'
 Plug 'Shougo/vimfiler.vim'

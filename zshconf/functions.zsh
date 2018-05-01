@@ -46,3 +46,13 @@ function skype-del {
     local number="${1:-200}"
     rm -rf /Users/$(whoami)/Library/Application\ Support/Skype${number}
 }
+
+# Kubectl Function
+function kubectl() {
+    if ! type __start_kubectl >/dev/null 2>&1; then
+        source <(command kubectl completion zsh)
+    fi
+
+    command kubectl "$@"
+}
+

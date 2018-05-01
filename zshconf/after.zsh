@@ -41,6 +41,6 @@ export PYTHONSTARTUP=$HOME/.pythonrc
 #
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.1.jdk/Contents/Home
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"

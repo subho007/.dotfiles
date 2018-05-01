@@ -9,7 +9,7 @@ alias lb="showmarks"
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
 alias git=hub
-
+alias g=hub
 # IP addresses
 alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
   

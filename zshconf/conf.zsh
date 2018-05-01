@@ -1,11 +1,6 @@
 # before anything loads
 source $HOME/.dotfiles/zshconf/before.zsh
 
-export ZSH_PLUGINS_ALIAS_TIPS_TEXT=' alias hint: '
-
-# auto title the terminal
-zstyle ':prezto:module:terminal' auto-title 'yes'
-
 # color substring search
 zstyle ':prezto:module:history-substring-search' color 'yes'
 
@@ -29,4 +24,4 @@ source $HOME/.dotfiles/zshconf/functions.zsh
 # After everything loads
 source $HOME/.dotfiles/zshconf/after.zsh
 
-[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm
+alias rvmenv="[[ -s $HOME/.rvm/scripts/rvm ]] && source $HOME/.rvm/scripts/rvm"
