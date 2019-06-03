@@ -38,7 +38,7 @@ fi
 if [[ ! -f "install.sh" && ! -d "dots" && ! -d "zshconf" ]]; then
     echo -e "Running via curl"
     if [[ ! -d "$HOME/.dotfiles" ]]; then
-        git clone git@github.com:subho007/.dotfiles.git $HOME/.dotfiles
+        git clone https://github.com/subho007/.dotfiles.git $HOME/.dotfiles
     else
         echo -e "Already cloned, please update it using git pull"
         exit 0
