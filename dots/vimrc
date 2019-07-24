@@ -37,6 +37,7 @@ Plug 'rizzatti/dash.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 Plug 'w0rp/ale'
+Plug 'vim-airline/vim-airline-themes'
 
 if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -79,11 +80,6 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 "set t_Co=256
 set background=dark
-"let g:gruvbox_contrast_dark='soft'
-let g:gruvbox_invert_signs=0
-let g:gruvbox_sign_column='dark0'
-colorscheme gruvbox
-
 set fillchars+=vert:│
 
 " ---

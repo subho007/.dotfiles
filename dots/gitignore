@@ -40,3 +40,7 @@ Thumbs.db
 # Autoenv ZSH Ignore #
 ######################
 .autoenv.zsh
+
+# Visual Code Traces #
+.vscode/*
+env/*

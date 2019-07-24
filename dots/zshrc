@@ -1,5 +1,9 @@
-# :: Zplug - ZSH plugin manager
-export ZPLUG_HOME=$HOME/.zplug
+export ZPLUG_HOME=~/.zplug
+export ZPLUG_ROOT=~/.zplug
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export EDITOR=nvim
+DEFAULT_USER="subho"
 
 # Check if zplug is installed
 if [[ ! -d $ZPLUG_HOME ]]; then
@@ -12,13 +16,49 @@ source $ZPLUG_HOME/init.zsh
 
 
 # Zplug plugins
-zplug "zplug/zplug", hook-build:"zplug --self-manage"
+zplug "zplug/zplug"
 
 # zplug modules to be installed
-source $HOME/.dotfiles/zshconf/modules.zsh
+# Plugins from prezto
 
-# zsh modules configuration
-source $HOME/.dotfiles/zshconf/conf.zsh
+zplug "modules/history", from:prezto
+zplug "modules/utility", from:prezto
+zplug "modules/completion", from:prezto, on:"modules/utility"
+
+# Bookmarks and jump
+zplug "jocelynmallon/zshmarks"
+
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure",  use:pure.zsh, from:github, as:theme
+
+# zsh-autoenv automatically sources
+zplug "Tarrasch/zsh-autoenv"
+
+# History search like fish shell
+
+zplug "zsh-users/zsh-completions", defer:0
+zplug "zsh-users/zsh-autosuggestions", defer:1, on:"zsh-users/zsh-completions"
+zplug "zsh-users/zsh-syntax-highlighting", defer:1, on:"zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search", defer:2, on:"zsh-users/zsh-syntax-highlighting"
+
+
+zplug "zdharma/fast-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search", on:"zdharma/fast-syntax-highlighting"
+zplug "modules/autosuggestions", from:prezto, on:"modules/history-substring-search"  # From prezto
+
+# Add local scripts via zplug
+
+zplug "$HOME/.dotfiles/zshconf", from:local, use:"*.zsh"
+zplug "~/.iterm2_shell_integration.zsh", from:local
+
+
+# Install plugins if there are plugins that have not been installed
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
 
 # Load everything
 zplug load
