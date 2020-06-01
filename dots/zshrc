@@ -25,6 +25,9 @@ zplug "modules/history", from:prezto
 zplug "modules/utility", from:prezto
 zplug "modules/completion", from:prezto, on:"modules/utility"
 
+# oh-my-zsh
+zplug "plugins/osx", from:oh-my-zsh
+
 # Bookmarks and jump
 zplug "jocelynmallon/zshmarks"
 
@@ -49,7 +52,7 @@ zplug "modules/autosuggestions", from:prezto, on:"modules/history-substring-sear
 # Add local scripts via zplug
 
 zplug "$HOME/.dotfiles/zshconf", from:local, use:"*.zsh"
-zplug "~/.iterm2_shell_integration.zsh", from:local
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 
 # Install plugins if there are plugins that have not been installed
